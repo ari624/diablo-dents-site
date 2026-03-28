@@ -82,6 +82,9 @@ const Header = () => {
                 <Link href="/service-areas/blackhawk" className="block px-4 py-2 text-gray-300 hover:text-teal transition-colors">
                   Blackhawk
                 </Link>
+                <Link href="/service-areas/castro-valley" className="block px-4 py-2 text-gray-300 hover:text-teal transition-colors">
+                  Castro Valley
+                </Link>
               </div>
             </div>
           </nav>
@@ -195,6 +198,13 @@ const Header = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Blackhawk
+                </Link>
+                <Link
+                  href="/service-areas/castro-valley"
+                  className="block text-gray-400 hover:text-teal transition-colors py-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Castro Valley
                 </Link>
               </div>
             )}

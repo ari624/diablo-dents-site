@@ -13,7 +13,7 @@ import CTA from '@/components/CTA';
 export const metadata: Metadata = {
   title: 'Diablo Dents - Paintless Dent Removal East Bay',
   description: 'Expert paintless dent removal service in Pleasanton, Livermore, San Ramon, and surrounding East Bay areas. 20+ years experience, mobile service, satisfaction guaranteed. 89 five-star Google reviews.',
-  keywords: 'paintless dent removal, PDR, dent repair, East Bay, Pleasanton, Livermore, San Ramon, Danville, Dublin, Blackhawk, door dings, hail damage',
+  keywords: 'paintless dent removal, PDR, dent repair, East Bay, Pleasanton, Livermore, San Ramon, Danville, Dublin, Blackhawk, Castro Valley, door dings, hail damage',
   openGraph: {
     title: 'Diablo Dents - Paintless Dent Removal East Bay',
     description: 'Expert paintless dent removal service in Pleasanton, Livermore, San Ramon, and surrounding East Bay areas.',

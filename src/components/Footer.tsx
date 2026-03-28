@@ -50,6 +50,7 @@ export default function Footer() {
               <li><Link href="/#service-areas" className="hover:text-teal transition-colors duration-300">Pleasanton</Link></li>
               <li><Link href="/#service-areas" className="hover:text-teal transition-colors duration-300">Livermore</Link></li>
               <li><Link href="/#service-areas" className="hover:text-teal transition-colors duration-300">San Ramon</Link></li>
+              <li><Link href="/#service-areas" className="hover:text-teal transition-colors duration-300">Castro Valley</Link></li>
               <li><Link href="/#service-areas" className="hover:text-teal transition-colors duration-300">East Bay Areas</Link></li>
             </ul>
           </div>
@@ -117,9 +118,9 @@ export default function Footer() {
             <a href="/#services" className="hover:text-teal transition-colors duration-300">
               Services
             </a>
-            <a href="https://www.google.com/search?q=diablo+dents+pleasanton+reviews" target="_blank" rel="noopener noreferrer" className="hover:text-teal transition-colors duration-300">
-              Google Reviews
-            </a>
+            <Link href="/contact" className="hover:text-teal transition-colors duration-300">
+              Get Estimate
+            </Link>
           </div>
         </div>
       </div>

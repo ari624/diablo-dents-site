@@ -61,12 +61,16 @@ export default function About() {
             {/* Image */}
             <div className="flex justify-center">
               <div className="relative w-full max-w-md">
-                <div className="glass rounded-xl overflow-hidden">
+                <div className="glass rounded-xl overflow-hidden aspect-[3/4]">
                   <img
                     src="/chris-garage.jpg"
-                    alt="Chris Jacob in his Diablo Dents shirt with a red sports car"
-                    className="w-full h-auto"
+                    alt="Chris Jacob, owner of Diablo Dents, in his garage with a red Porsche"
+                    className="w-full h-full object-cover object-top"
                   />
+                </div>
+                <div className="mt-4 text-center">
+                  <p className="text-white font-semibold">Chris Jacob</p>
+                  <p className="text-gray-400 text-sm">Owner, Diablo Dents</p>
                 </div>
               </div>
             </div>

@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Service Areas - Diablo Dents Paintless Dent Removal',
-  description: 'Paintless dent removal service in Pleasanton, Livermore, San Ramon, Danville, Dublin, Blackhawk, and throughout the East Bay.',
-  keywords: 'service areas, Pleasanton PDR, Livermore dent removal, San Ramon, Danville, Dublin, Blackhawk, East Bay',
+  description: 'Paintless dent removal service in Pleasanton, Livermore, San Ramon, Danville, Dublin, Blackhawk, Castro Valley, and throughout the East Bay.',
+  keywords: 'service areas, Pleasanton PDR, Livermore dent removal, San Ramon, Danville, Dublin, Blackhawk, Castro Valley, East Bay',
 };
 
 export default function ServiceAreas() {
@@ -51,6 +51,11 @@ export default function ServiceAreas() {
       name: 'Blackhawk',
       slug: 'blackhawk',
       description: 'Premium dent removal service for Blackhawk residents',
+    },
+    {
+      name: 'Castro Valley',
+      slug: 'castro-valley',
+      description: 'Professional paintless dent removal now serving Castro Valley',
     },
   ];
 

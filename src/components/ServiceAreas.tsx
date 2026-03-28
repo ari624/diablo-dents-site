@@ -37,6 +37,7 @@ export default function ServiceAreas() {
     { name: 'Danville', slug: 'danville' },
     { name: 'Dublin', slug: 'dublin' },
     { name: 'Blackhawk', slug: 'blackhawk' },
+    { name: 'Castro Valley', slug: 'castro-valley' },
   ];
 
   return (
@@ -50,7 +51,7 @@ export default function ServiceAreas() {
         </div>
 
         {/* Cities Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-16">
           {cities.map((city, index) => (
             <Link
               key={index}
