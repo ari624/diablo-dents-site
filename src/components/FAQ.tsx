@@ -5,6 +5,32 @@ import { useState } from 'react';
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  const PlusIcon = () => (
+    <svg className="w-6 h-6 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
+  );
+
+  const MinusIcon = () => (
+    <svg className="w-6 h-6 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
+  );
+
+  const PhoneIcon = () => (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+
+  const MailIcon = () => (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  );
+
   const faqs = [
     {
       question: 'What is paintless dent removal (PDR)?',
@@ -59,48 +85,58 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-dark-card">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="section-title text-center">Frequently Asked Questions</h2>
-        <p className="section-subtitle text-center">
-          Have questions about paintless dent removal? We've got answers.
-        </p>
+    <section className="py-20 md:py-28 bg-dark-card">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="section-title">Frequently Asked Questions</h2>
+          <p className="section-subtitle">
+            Have questions about paintless dent removal? We've got answers.
+          </p>
+        </div>
 
-        <div className="space-y-4 mb-12">
+        {/* Accordion */}
+        <div className="space-y-4 mb-16">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-700 rounded-lg overflow-hidden hover:border-teal transition"
+              className="card group border border-white/10 overflow-hidden transition-all duration-300"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 text-left font-semibold flex items-center justify-between hover:bg-dark-bg transition"
+                className="w-full px-6 py-5 text-left font-semibold flex items-center justify-between hover:bg-white/5 transition-all duration-300 group"
               >
-                <span className="text-lg">{faq.question}</span>
-                <span className="text-teal text-2xl">
-                  {openIndex === index ? '−' : '+'}
+                <span className="text-lg text-white group-hover:text-teal transition-colors duration-300">
+                  {faq.question}
                 </span>
+                <div className="flex-shrink-0 ml-4 transform transition-transform duration-300">
+                  {openIndex === index ? <MinusIcon /> : <PlusIcon />}
+                </div>
               </button>
+
+              {/* Expanded content */}
               {openIndex === index && (
-                <div className="px-6 py-4 bg-dark-bg text-gray-300 border-t border-gray-700">
-                  {faq.answer}
+                <div className="px-6 py-5 bg-white/3 text-gray-300 border-t border-white/10 animate-fade-in">
+                  <p className="leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
           ))}
         </div>
 
-        <div className="text-center bg-teal bg-opacity-10 border border-teal border-opacity-30 rounded-lg p-8">
-          <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
-          <p className="text-gray-300 mb-6">
+        {/* CTA Section */}
+        <div className="glass border border-white/10 rounded-xl p-8 md:p-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Still Have Questions?</h3>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Don't hesitate to reach out. We're happy to answer any questions about our service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:925-462-1200" className="btn-primary">
-              Call Us: 925-462-1200
+              <PhoneIcon />
+              <span>Call: 925-462-1200</span>
             </a>
-            <a href="mailto:Chris@DiabloDents.com" className="btn-secondary">
-              Email: Chris@DiabloDents.com
+            <a href="mailto:Chris@DiabloDents.com" className="btn-glass">
+              <MailIcon />
+              <span>Email Chris</span>
             </a>
           </div>
         </div>

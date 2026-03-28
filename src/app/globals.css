@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,53 +15,148 @@ html {
 }
 
 body {
-  background-color: #1a1a2e;
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: #0A0A1A;
+  color: #FFFFFF;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  color: #0aadad;
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-a:hover {
-  color: #1abfbf;
+::-webkit-scrollbar-track {
+  background: #0A0A1A;
 }
 
+::-webkit-scrollbar-thumb {
+  background: #0AADAD;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1ABFBF;
+}
+
+/* Selection color */
+::selection {
+  background-color: #0AADAD;
+  color: #FFFFFF;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(10, 173, 173, 0.5), 0 0 40px rgba(10, 173, 173, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(10, 173, 173, 0.8), 0 0 60px rgba(10, 173, 173, 0.3);
+  }
+}
+
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Utility classes */
+.glass {
+  @apply backdrop-blur-md bg-white/5 border border-white/10;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #0AADAD 0%, #1ABFBF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  @apply relative;
+  background: linear-gradient(135deg, #0AADAD, #1ABFBF);
+}
+
+/* Button styles */
 .btn-primary {
-  @apply inline-block px-6 py-3 bg-teal text-dark-bg font-bold rounded-lg transition-all hover:bg-teal-light cursor-pointer;
+  @apply inline-flex items-center gap-2 px-6 py-3 bg-teal text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal/50 cursor-pointer;
 }
 
 .btn-secondary {
-  @apply inline-block px-6 py-3 border-2 border-teal text-teal font-bold rounded-lg transition-all hover:bg-teal hover:text-dark-bg cursor-pointer;
+  @apply inline-flex items-center gap-2 px-6 py-3 border-2 border-teal text-teal font-semibold rounded-lg transition-all duration-300 hover:bg-teal hover:text-white hover:scale-105 cursor-pointer;
 }
 
+.btn-glass {
+  @apply inline-flex items-center gap-2 px-6 py-3 glass text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10 hover:scale-105 cursor-pointer;
+}
+
+/* Section styles */
 .section-title {
-  @apply text-4xl md:text-5xl font-bold mb-4;
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-4;
 }
 
 .section-subtitle {
-  @apply text-lg text-gray-300 mb-12;
+  @apply text-lg md:text-xl text-gray-300 mb-12;
 }
 
 .card {
-  @apply bg-dark-card p-6 rounded-lg transition-all hover:shadow-lg;
+  @apply glass p-8 rounded-xl transition-all duration-300 hover:bg-white/8 hover:shadow-lg hover:shadow-teal/20;
 }
 
+/* Form elements */
 input, textarea, select {
-  @apply bg-gray-800 text-white border border-gray-700 rounded px-4 py-2 focus:border-teal focus:outline-none;
+  @apply w-full bg-white/5 text-white border border-white/10 rounded-lg px-4 py-3 transition-all duration-300 focus:border-teal focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal/50;
+}
+
+input::placeholder, textarea::placeholder {
+  @apply text-gray-400;
 }
 
 button {
-  cursor: pointer;
+  @apply cursor-pointer;
 }
 
-.hero-overlay {
-  background: linear-gradient(135deg, rgba(10, 173, 173, 0.1) 0%, rgba(26, 26, 46, 0.9) 100%);
+/* Text utilities */
+.text-gray-light {
+  @apply text-gray-300;
+}
+
+.text-gray-muted {
+  @apply text-gray-400;
+}
+
+/* Links */
+a {
+  @apply text-teal transition-colors duration-300 hover:text-teal-light;
+}
+
+a:focus-visible {
+  @apply outline-none ring-2 ring-teal/50 rounded;
 }
