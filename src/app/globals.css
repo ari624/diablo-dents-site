@@ -127,7 +127,7 @@ body {
 }
 
 .card {
-  @apply glass p-8 rounded-xl transition-all duration-300 hover:bg-white/8 hover:shadow-lg hover:shadow-teal/20;
+  @apply glass p-8 rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-teal/20;
 }
 
 /* Form elements */
