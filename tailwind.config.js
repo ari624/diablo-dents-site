@@ -10,9 +10,9 @@ module.exports = {
       colors: {
         'teal': '#0AADAD',
         'teal-light': '#1ABFBF',
-        'dark-bg': '#0A0A1A',
-        'dark-card': '#12122A',
-        'dark-accent': '#1A1A3E',
+        'dark-bg': '#0B0F11',
+        'dark-card': '#111719',
+        'dark-accent': '#161D20',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

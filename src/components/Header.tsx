@@ -28,21 +28,18 @@ const Header = () => {
     </svg>
   );
 
-  const DiamondIcon = () => (
-    <svg className="w-5 h-5 text-teal" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2L22 9L12 16L2 9L12 2Z" />
-    </svg>
-  );
-
   return (
     <>
       {/* Main header with glass effect */}
       <header className="sticky top-0 z-50 glass backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-4 py-5 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <DiamondIcon />
-            <span className="text-2xl font-bold text-white">Diablo Dents</span>
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <img
+              src="/logo.webp"
+              alt="Diablo Dents - Advanced Paintless Dent Removal"
+              className="h-12 md:h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
