@@ -7,6 +7,7 @@ import BeforeAfter from '@/components/BeforeAfter';
 import Testimonials from '@/components/Testimonials';
 import ServiceAreas from '@/components/ServiceAreas';
 import FAQ from '@/components/FAQ';
+import VideoEmbed from '@/components/VideoEmbed';
 import CTA from '@/components/CTA';
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function Home() {
       <TrustBadges />
       <Services />
       <HowItWorks />
+      <VideoEmbed />
       <BeforeAfter />
       <Testimonials />
       <ServiceAreas />
