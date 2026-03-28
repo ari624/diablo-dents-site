@@ -84,7 +84,7 @@ export default function Services() {
     {
       title: 'Panel Dings',
       description: 'Dents on doors, fenders, and side panels. Quickly restored to factory condition without repainting.',
-      details: 'Panel dings are common from minor accidents or impacts. PDR is ideal for these repairs, maintaining your vehicle's value and factory finish better than traditional methods.',
+      details: "Panel dings are common from minor accidents or impacts. PDR is ideal for these repairs, maintaining your vehicle's value and factory finish better than traditional methods.",
       icon: <LayersIcon />,
       turnaround: 'Usually completed in 1-3 hours depending on dent size',
     },
