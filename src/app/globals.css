@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #0aadad;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1abfbf;
+}
+
+.btn-primary {
+  @apply inline-block px-6 py-3 bg-teal text-dark-bg font-bold rounded-lg transition-all hover:bg-teal-light cursor-pointer;
+}
+
+.btn-secondary {
+  @apply inline-block px-6 py-3 border-2 border-teal text-teal font-bold rounded-lg transition-all hover:bg-teal hover:text-dark-bg cursor-pointer;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-bold mb-4;
+}
+
+.section-subtitle {
+  @apply text-lg text-gray-300 mb-12;
+}
+
+.card {
+  @apply bg-dark-card p-6 rounded-lg transition-all hover:shadow-lg;
+}
+
+input, textarea, select {
+  @apply bg-gray-800 text-white border border-gray-700 rounded px-4 py-2 focus:border-teal focus:outline-none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(10, 173, 173, 0.1) 0%, rgba(26, 26, 46, 0.9) 100%);
+}
